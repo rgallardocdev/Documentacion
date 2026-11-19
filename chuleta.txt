@@ -1,0 +1,47 @@
+nvidia
+
+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
+
+---------------------------------------------------------------------------------
+
+<<<<< Desde la pagina 134 del documento Word <<<<<<<<<<<<<<<<<<<<<<<<<<
+
+para crear un nuevo proyecto:
+!! LA LINEA DE COMANDO SE LANZA EN EL cmder !!
+
+ng new [nombreproyecto] --standalone=false
+
+-----------------------------------------------------
+Abro en VSCode el folder con el proyect que me 
+acabo de crear en el cmder
+----------------------------------------------------------
+preparamos el entorno para recibir APIs
+* abrimos el terminal/command promt
+ng g environments
+-----------------------------------------------------
+para crear un nuevo componente:
+* abrimos el terminal/command promt
+ng g c components/testComponent
+------------------------------------------------------
+para el menú de Bootstrap debo modificar:
+- app-routing-module.ts
+	debemos añadir una linea en Routes con el componente homecomponent 
+- app-module.ts
+	debemos añadir FormsModule en imports
+	debemos añadir provideHttpClient(), miServiceHospitales en providers
+- menu-component.html
+	debemos obtener de internet un menú de Bootstrap de versión 5.3
+- app.html
+	debemos añadir el app de menu-component que acabamos de crear
+- index.html
+	debemos añadir las referencias link y src para usar el Bootstrap
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+------------------------------------------------------
+- debemos copiar la carpeta imagenes
+------------------------------------------------------
+creamos en src/app
+* carpeta models y creamos el model: hospital.ts
+* carpeta services y creamos el servicio: service.hospitales.ts
+------------------------------------------------------
+
